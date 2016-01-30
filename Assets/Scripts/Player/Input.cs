@@ -1,5 +1,6 @@
 ﻿namespace Assets.Scripts.Player
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -12,6 +13,7 @@
     using UnityEngine;
     using UnityEngine.Events;
 
+    [Serializable]
     public class IntEvent : UnityEvent<int>{}
 
     public class Input : MonoBehaviour

@@ -36,7 +36,7 @@ namespace DWMCGameLogic
         public Attack processInput(List<int> inputCombination, Modifiers modifier)
         {
             // Determine the state of the player and get any valid combos from the input. 
-            var playerCombination = this.setStateAndGetCombo(inputCombination);
+            var playerCombination = this.SetStateAndGetCombo(inputCombination);
 
             // Create the attack object
             var attack = this.GetAttack(playerCombination, modifier);
@@ -76,23 +76,27 @@ namespace DWMCGameLogic
                     {
                         Value = 0,
                         Modifier = Modifiers.None,                       
-                        isStun = true
+                        isStun = true,
+                        Damage = 0
                     };
                 }
                 else
                 {
                     this.health -= (int)attack.Value;
+                    this.CheckIfDead();                    
                 }
             }
             else
             {
                 this.health -= (int)attack.Value;
+                this.CheckIfDead();
             }
             return new Counter
             {
                 Value = 0,
                 Modifier = Modifiers.None,
-                isStun = false
+                isStun = false,
+                Damage =0
             };            
         }
 
@@ -154,7 +158,7 @@ namespace DWMCGameLogic
             return result;
         }
 
-        private List<int> setStateAndGetCombo(List<int> inputCombination)
+        private List<int> SetStateAndGetCombo(List<int> inputCombination)
         {
             //Compare input combination to the round attack combos.
             var attackValue = this.GetAttackValue(inputCombination);
@@ -174,6 +178,13 @@ namespace DWMCGameLogic
                 isAttackState.Invoke();
                 this.state = State.Attack;
                 return attackValue;
+            }
+        }
+        private void CheckIfDead()
+        {
+            if(this.health <= 0)
+            {
+                isDead.Invoke();
             }
         }
     }
