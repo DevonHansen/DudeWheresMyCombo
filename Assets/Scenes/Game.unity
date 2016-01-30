@@ -194,7 +194,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 176393788}
   m_Layer: 0
-  m_Name: Bad Side
+  m_Name: Good Side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,7 +224,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 395364025}
   m_Layer: 0
-  m_Name: Good side
+  m_Name: Bad side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
