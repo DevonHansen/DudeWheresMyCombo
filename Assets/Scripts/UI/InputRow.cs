@@ -26,14 +26,17 @@ public class InputRow : MonoBehaviour
 		{
 			btn.buttonSelector.interactable = false; // Will cause transition animation.
 		}
+		index = 0;
 	}
 
+	int index = 0;
 	public void ActivateButton(int button, string input)
 	{
-		print("ActivateButton");
+		print("ActivateButton " + index + "-" + input);
 		Sprite s = ImageMap.instance.GetSprite(input);
-		row.buttons[button].button.sprite = s;
-		row.buttons[button].buttonSelector.interactable = true;
+		row.buttons[index].button.sprite = s;
+		row.buttons[index].buttonSelector.interactable = true;
+		index++;
 	}
 
 

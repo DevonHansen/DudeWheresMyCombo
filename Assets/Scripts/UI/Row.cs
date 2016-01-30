@@ -5,7 +5,7 @@ using System.Linq;
 
 public class Row : MonoBehaviour
 {
-	[HideInInspector]
+	//[HideInInspector]
 	public List<Button> buttons;
 
 	void Awake()
