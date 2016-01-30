@@ -115,33 +115,43 @@ namespace DWMCGameLogic
 
             return new Attack
             {
-                Value = attackValue,
-                Modifier = modifier
+                Damage = attackValue,
+                Modifier = modifier,
+                Value = inputCombination.Count
             };
         }
 
+        /// <summary>
+        /// Returns the largest list match against the attack combos
+        /// </summary>
+        /// <param name="inputCombination"></param>
+        /// <returns></returns>
         private List<int> GetAttackValue(List<int> inputCombination)
         {
+            List<int> result = new List<int>();
+
             for (int i = 0; i < thisRound.determinedAttackCombos.Count; i++)
             {
                 if (thisRound.determinedAttackCombos[i].Equals(inputCombination))
                 {
-                    return thisRound.determinedAttackCombos[i];
+                    result = thisRound.determinedAttackCombos[i];
                 }
             }
-            return new List<int>();
+            return result;
         }
 
         private List<int> GetDefenseValue(List<int> inputCombination)
         {
+            List<int> result = new List<int>();
+
             for (int i = 0; i < thisRound.determinedDefenseCombos.Count; i++)
             {
-                if (thisRound.determinedAttackCombos[i].Equals(inputCombination))
+                if (thisRound.determinedDefenseCombos[i].Equals(inputCombination))
                 {
-                    return thisRound.determinedAttackCombos[i];
+                    result = thisRound.determinedAttackCombos[i];
                 }
             }
-            return new List<int>();
+            return result;
         }
 
         private List<int> setStateAndGetCombo(List<int> inputCombination)

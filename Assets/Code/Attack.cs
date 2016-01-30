@@ -5,10 +5,12 @@ namespace DWMCGameLogicDtos
 {
     public class Attack
     {
-        public double Value { get; set; }
+        public int Value { get; set; }
 
         public Modifiers Modifier { get; set; }
 
         public bool isStun { get; set; }
+
+        public double Damage { get; set; }
     }
 }
