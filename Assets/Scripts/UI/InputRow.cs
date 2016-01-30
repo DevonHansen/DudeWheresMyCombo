@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Diagnostics;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using Input = Assets.Scripts.Player.Input;
@@ -13,7 +12,11 @@ public class InputRow : MonoBehaviour
 
 	void Start()
 	{
-		var input = GameObject.Find(side).GetComponent<Input>();
+		var inputGO = GameObject.Find(side);
+		if (inputGO == null)
+			Debug.LogWarning("Could not find " + side);
+
+		var input = inputGO.GetComponent<Input>();
 		input.OnKeyPressed.AddListener(ActivateButton);
 	}
 
