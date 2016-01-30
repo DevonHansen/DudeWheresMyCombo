@@ -2,7 +2,7 @@
 {
     public enum Modifiers
     {
-        None,
+        None = 100,
         Minor = 120,
         Major = 150
     }

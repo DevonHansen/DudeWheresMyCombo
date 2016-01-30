@@ -1,17 +1,28 @@
 ﻿using DWMCGameLogicDtos;
 using System;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 namespace DWMCGameLogic
-{
+{ 
     public class Player
     {
-        State state;
-        byte health;
+        // Class attributes
+        private GameLogic thisRound;
+        public State state;
+        private int health;
+        private List<int> currentDefenseCombo;
 
-        public Player(byte health)
+        // Unity Events 
+        public UnityEvent isDefendState;
+        public UnityEvent isAttackState;
+        public UnityEvent isDead;
+        public UnityEvent failedAttack;
+
+        public Player(byte health, GameLogic thisRound)
         {
             this.health = health;
+            this.thisRound = thisRound;
         }
 
         /// <summary>
@@ -19,68 +30,112 @@ namespace DWMCGameLogic
         /// </summary>
         /// <param name="playerCombination"></param>
         /// <param name="modifier"></param>
-        public Attack processInput(Dictionary<int, List<int>> playerCombination, Modifiers modifier)
+        public Attack processInput(List<int> inputCombination, Modifiers modifier)
         {
+            // Determine the state of the player and get any valid combos from the input. 
+            var playerCombination = this.setStateAndGetCombo(inputCombination);
+
+            // Create the attack object
+            var attack = this.GetAttack(playerCombination, modifier);
+
+            //
             if (state == State.Attack)
             {
-                //Do something
+                return attack; 
             }
             else
             {
-                //Return a broken attack. 
-            }
-            return this.GetAttack(playerCombination, modifier);
-        }
-       
-        public void processAttack(Attack attack)
-        {
-            throw new NotImplementedException();
+                this.currentDefenseCombo = playerCombination;
+
+                return attack;
+            }      
         }
 
-        private Attack GetAttack(Dictionary<int, List<int>> playerCombination, Modifiers modifier)
+        /// <summary>
+        /// Processes an incoming attack. 
+        /// </summary>
+        /// <param name="attack"></param>
+        public Attack processIncomingAttack(Attack attack)
         {
+            // Check whether in defense mode, and whether defense is greater than attack. If it is, return an attack object
+            //  with isStun set to true. 
+            if (state == State.Defense)
+            {
+                var defense = this.GetAttack(currentDefenseCombo, Modifiers.None);
+                if(defense == attack)
+                {
+                    return new Attack();
+                }
+                else if (defense.Value > attack.Value)
+                {
+                    return new Attack
+                    {
+                        Value = 0,
+                        Modifier = Modifiers.None,                       
+                        isStun = true
+                    };
+                }
+            }
+            return new Attack();            
+        }
+
+        private Attack GetAttack(List<int> inputCombination, Modifiers modifier)
+        {
+            // Get an attack value from the input length. 
+            double attackValue = Math.Pow((double)inputCombination.Count, (double)inputCombination.Count) * ((int)modifier/100);
+
             return new Attack
             {
-                Value = this.GetAttackValue(playerCombination),
-                Modifiers = this.GetModifiers(modifier)
+                Value = attackValue,
+                Modifier = modifier
             };
         }
 
-        private Defense GetDefense(Dictionary<int, List<int>> playerCombination, Modifiers modifier)
+        private List<int> GetAttackValue(List<int> inputCombination)
         {
-            return new Defense
+            for (int i = 0; i < thisRound.determinedAttackCombos.Count; i++)
             {
-                Value = this.GetDefenseValue(playerCombination),
-                Modifiers = this.GetModifiers(modifier)
-            };
+                if (thisRound.determinedAttackCombos[i].Equals(inputCombination))
+                {
+                    return thisRound.determinedAttackCombos[i];
+                }
+            }
+            return new List<int>();
         }
 
-        private double GetAttackValue(Dictionary<int, List<int>> playerCombination)
+        private List<int> GetDefenseValue(List<int> inputCombination)
         {
-                double result = 0;
-
-                return result;
+            for (int i = 0; i < thisRound.determinedDefenseCombos.Count; i++)
+            {
+                if (thisRound.determinedAttackCombos[i].Equals(inputCombination))
+                {
+                    return thisRound.determinedAttackCombos[i];
+                }
+            }
+            return new List<int>();
         }
 
-        private double GetDefenseValue(Dictionary<int, List<int>> playerCombination)
+        private List<int> setStateAndGetCombo(List<int> inputCombination)
         {
-            double result = 0;
+            //Compare input combination to the round attack combos.
+            var attackValue = this.GetAttackValue(inputCombination);
 
-            return result;
-        }
+            //Compare input combination to the round defense combos.
+            var defenseValue = this.GetDefenseValue(inputCombination);
 
-        private double GetModifiers(Modifiers modifier)
-        {
-            double result;
-
-            if (modifier == Modifiers.Minor)
-                result = 1.2;
-            else if (modifier == Modifiers.Major)
-                result = 1.5;
-            else 
-                result = 1.0;
-
-            return result;
+            // Determine which of the resulting lists is larger, and set the state depending on that. 
+            if(attackValue.Count <= 0 || attackValue.Count < defenseValue.Count)
+            {
+                isDefendState.Invoke();
+                this.state = State.Defense;
+                return defenseValue;
+            }
+            else
+            {
+                isAttackState.Invoke();
+                this.state = State.Attack;
+                return attackValue;
+            }
         }
     }
 

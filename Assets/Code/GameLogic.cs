@@ -6,21 +6,20 @@ namespace DWMCGameLogic
 {
     public class GameLogic
     {
-        public Dictionary<byte, byte[]> determinedAttackCombos { get; set; }
+        public Dictionary<int, List<int>> determinedAttackCombos { get; set; }
 
-        public Dictionary<byte, byte[]> determinedDefenseCombos { get; set; }
+        public Dictionary<int, List<int>> determinedDefenseCombos { get; set; }
+
+        public GameLogic()
+        {
+        }
 
         public void GenerateAttackAndDefenseCombosForRound()
         {
 
             var randomInt = new Random();
-            Byte[] seedList = new Byte[8];
-
-       ////     seedList = randomInt.NextBytes(seedList);
-
+            
             // Pop this list and add to the rest of the attack dictionary
-
-            this.determinedAttackCombos.Add(8, seedList);
 
             // reverse the attack list
 
