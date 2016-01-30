@@ -12,10 +12,10 @@ public class RowController : MonoBehaviour
 		// Copy middle to top and bottom to middle 
 		for (int i = 0; i < 8; ++i)
 		{
-			top.button[i].sprite = middle.button[i].sprite;
-			top.button[i].color = middle.button[i].color;
-			middle.button[i].sprite = bottom.button[i].sprite;
-			middle.button[i].color = bottom.button[i].color;
+			top.buttons[i].sprite = middle.buttons[i].sprite;
+			top.buttons[i].color = middle.buttons[i].color;
+			middle.buttons[i].sprite = bottom.buttons[i].sprite;
+			middle.buttons[i].color = bottom.buttons[i].color;
 		}
 	}
 }
