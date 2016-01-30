@@ -51,7 +51,7 @@ namespace DWMCGameLogic
             }
 
             // Add to the defense dictionary
-            determinedAttackCombos = new Dictionary<int, List<int>>();
+            determinedDefenseCombos = new Dictionary<int, List<int>>();
 
             determinedDefenseCombos.Add(0, seededList.GetRange(0, 1));
             determinedDefenseCombos.Add(1, seededList.GetRange(0, 2));
