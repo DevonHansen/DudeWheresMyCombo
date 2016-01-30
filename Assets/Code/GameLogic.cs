@@ -12,13 +12,16 @@ namespace DWMCGameLogic
 
         public GameLogic()
         {
+            GenerateAttackAndDefenseCombosForRound();
         }
 
         public void GenerateAttackAndDefenseCombosForRound()
         {
 
-            var randomInt = new Random();
+            //var randomInt = new Random();
             
+
+
             // Pop this list and add to the rest of the attack dictionary
 
             // reverse the attack list
