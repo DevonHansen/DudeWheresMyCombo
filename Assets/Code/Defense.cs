@@ -9,5 +9,4 @@
 
         public Modifiers Modifier { get; set; }
     }
-
 }
