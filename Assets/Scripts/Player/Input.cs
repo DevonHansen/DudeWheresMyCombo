@@ -14,14 +14,14 @@
     using UnityEngine.Events;
 
     [Serializable]
-    public class IntEvent : UnityEvent<int>{}
+    public class AttackEvent : UnityEvent<Attack>{}
 
     [Serializable]
     public class IntStringEvent : UnityEvent<int, string> {}
 
     public class Input : MonoBehaviour
     {
-        public IntEvent OnAttack;
+        public AttackEvent OnAttack;
 
         [SerializeField]
         private List<KeyToIntValue> m_KeyMapping;
@@ -55,8 +55,8 @@
                 this.OnKeyPressed.Invoke(keyBind.Value, keyBind.AxisName);
             }
 
-            if(this.OnAttack != null)
-                this.OnAttack.Invoke(this.m_PlayerObject.processInput(this.m_CurrentKeyPresses, Modifiers.None).Value);
+            if(this.OnAttack != null && this.m_CurrentKeyPresses.Count == 8)
+                this.OnAttack.Invoke(this.m_PlayerObject.processInput(this.m_CurrentKeyPresses, Modifiers.None));
         }
 
         
