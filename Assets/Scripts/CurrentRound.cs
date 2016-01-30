@@ -6,6 +6,19 @@
     public class CurrentRound : MonoBehaviour
     {
         public GameLogic m_CurrentRound;
+
+        public GameLogic CurrentRoundDetails
+        {
+            get
+            {
+                if (this.m_CurrentRound == null)
+                {
+                    this.m_CurrentRound = new GameLogic();
+                }
+                return this.m_CurrentRound;
+            }
+        }
+
         
         private void Awake()
         {

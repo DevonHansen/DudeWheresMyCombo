@@ -294,11 +294,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[0].AxisName
-      value: Player2_Left
+      value: Player2-Left
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[1].AxisName
-      value: Player2_Right
+      value: Player2-Right
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[1].Value
@@ -306,7 +306,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[2].AxisName
-      value: Player2_Up
+      value: Player2-Up
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[2].Value
@@ -314,12 +314,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[3].AxisName
-      value: Player2_Down
+      value: Player2-Down
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[3].Value
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: m_CurrentRound
+      value: 
+      objectReference: {fileID: 1144356442}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
   m_IsPrefabParent: 0
@@ -434,11 +438,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[0].AxisName
-      value: Player1_Left
+      value: Player1-Left
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[1].AxisName
-      value: Player1_Right
+      value: Player1-Right
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[1].Value
@@ -446,7 +450,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[2].AxisName
-      value: Player1_Up
+      value: Player1-Up
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[2].Value
@@ -454,7 +458,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[3].AxisName
-      value: Player1_Down
+      value: Player1-Down
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: m_CurrentRound
+      value: 
+      objectReference: {fileID: 1144356442}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: m_KeyMapping.Array.data[3].Value
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
@@ -501,7 +513,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1542806842
 GameObject:
   m_ObjectHideFlags: 0
