@@ -7,7 +7,11 @@
 
     using DWMCGameLogic;
 
+    using DWMCGameLogicDtos;
+
     using UnityEngine;
+    using UnityEngine.Events;
+
     public class PlayerComponent : MonoBehaviour
     {
         [SerializeField]
@@ -22,7 +26,13 @@
         [SerializeField]
         private List<KeyToIntValue> m_KeyMapping;
 
-        private List<uint> m_CurrentKeyPresses; 
+        private List<uint> m_CurrentKeyPresses;
+
+        [SerializeField]
+        private UnityEvent OnCompletedSuccessEvent;
+
+        [SerializeField]
+        private UnityEvent OnCompletedFailedEvent;
 
         private void Start()
         {
@@ -41,6 +51,20 @@
             foreach (var keyBind in this.m_KeyMapping.Where(x => UnityEngine.Input.GetButton(x.AxisName)))
             {
                 this.m_CurrentKeyPresses.Add(keyBind.Value);
+            }
+
+            if (this.m_CurrentKeyPresses.Count == 8)
+            {
+                var attack = this.m_PlayerLogic.processInput(new Dictionary<int, List<int>>(), Modifiers.None);
+
+                if (attack == null)
+                {
+                    this.OnCompletedFailedEvent.Invoke();
+                }
+                else
+                {
+                    this.OnCompletedSuccessEvent.Invoke();
+                }
             }
         }
     }
