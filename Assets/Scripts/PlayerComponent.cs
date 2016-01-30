@@ -1,5 +1,6 @@
 ﻿namespace Assets.Scripts
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -14,58 +15,46 @@
 
     public class PlayerComponent : MonoBehaviour
     {
-        [SerializeField]
-        private string Name;
 
         [SerializeField]
         [Range(0, 100)]
         private uint m_StartPercentage;
 
-        private Player m_PlayerLogic;
-
         [SerializeField]
         private List<KeyToIntValue> m_KeyMapping;
 
-        private List<uint> m_CurrentKeyPresses;
-
         [SerializeField]
-        private UnityEvent OnCompletedSuccessEvent;
+        private CurrentRound m_CurrentGame;
 
-        [SerializeField]
-        private UnityEvent OnCompletedFailedEvent;
+        private List<int> m_CurrentKeyPresses = new List<int>();
+        
+        private Player m_PlayerObject;
+
+        private uint m_CurrentHighest = 0;
 
         private void Start()
         {
-            this.m_CurrentKeyPresses = new List<uint>();
-
             if (m_KeyMapping == null || this.m_KeyMapping.Count == 0)
             {
                 Debug.LogError("Key mapping shouldn't be empty");
             }
-            
-            this.m_PlayerLogic = new Player((byte)this.m_StartPercentage);
         }
 
         private void Update()
         {
             foreach (var keyBind in this.m_KeyMapping.Where(x => UnityEngine.Input.GetButton(x.AxisName)))
             {
-                this.m_CurrentKeyPresses.Add(keyBind.Value);
+                
             }
 
-            if (this.m_CurrentKeyPresses.Count == 8)
-            {
-                var attack = this.m_PlayerLogic.processInput(new Dictionary<int, List<int>>(), Modifiers.None);
+            var attack = this.m_PlayerObject.processInput(this.m_CurrentKeyPresses, Modifiers.None);
 
-                if (attack == null)
-                {
-                    this.OnCompletedFailedEvent.Invoke();
-                }
-                else
-                {
-                    this.OnCompletedSuccessEvent.Invoke();
-                }
-            }
+            
+        }
+
+        public void Reset()
+        {
+            this.m_PlayerObject = new Player((byte)this.m_StartPercentage, this.m_CurrentGame.m_CurrentRound);
         }
     }
 }

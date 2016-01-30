@@ -10,7 +10,7 @@ namespace DWMCGameLogic
         // Class attributes
         private GameLogic thisRound;
         public State state;
-        private int health;
+        public int health;
         private List<int> currentDefenseCombo;
 
         // Unity Events 
