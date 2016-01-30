@@ -420,7 +420,27 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: Characters-Body/Characters_Evil-Torso/Characters_Evil-Head/Characters_HeadPiece/Characters_Evil-Flame
-  m_FloatCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Intensity
+    path: Characters-Body/Characters_Evil-Torso/Characters_Evil-Head/Characters_HeadPiece/FlameLight
+    classID: 108
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -518,6 +538,12 @@ AnimationClip:
       script: {fileID: 0}
       classID: 4
       customType: 14
+      isPPtrCurve: 0
+    - path: 1337964559
+      attribute: 898800009
+      script: {fileID: 0}
+      classID: 108
+      customType: 25
       isPPtrCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
@@ -1860,6 +1886,26 @@ AnimationClip:
     attribute: localEulerAnglesRaw.z
     path: Characters-Body/Characters_Evil-Torso/Characters_Evil-Head
     classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Intensity
+    path: Characters-Body/Characters_Evil-Torso/Characters_Evil-Head/Characters_HeadPiece/FlameLight
+    classID: 108
     script: {fileID: 0}
   m_EulerEditorCurves:
   - curve:
