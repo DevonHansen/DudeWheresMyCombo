@@ -8,7 +8,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 429486}
-  - 114: {fileID: 11492758}
+  - 114: {fileID: 11408126}
+  - 114: {fileID: 11436428}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11492758
+--- !u!114 &11408126
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -36,18 +37,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 125838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af838a9a2b52eb54e8469cb14821f241, type: 3}
+  m_Script: {fileID: 11500000, guid: 5260fb3ccf8206d438f0c20b9a33910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  m_StartPercentage: 100
-  m_KeyMapping: []
-  OnCompletedSuccessEvent:
+  m_CurrentHealth: 0
+  OnDeath:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnCompletedFailedEvent:
+--- !u!114 &11436428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0707e38933e51534892c155e52e79d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_KeyMapping: []
+  OnKeyPressed:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
