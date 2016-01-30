@@ -6,6 +6,6 @@
     public class KeyToIntValue
     {
         public string AxisName;
-        public int Value;
+        public uint Value;
     }
 }
