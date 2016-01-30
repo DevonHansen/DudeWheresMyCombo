@@ -49,14 +49,17 @@
         private void Update()
         {
 
-            foreach (var keyBind in this.m_KeyMapping.Where(x => UnityEngine.Input.GetButton(x.AxisName)))
+            foreach (var keyBind in this.m_KeyMapping.Where(x => UnityEngine.Input.GetButtonDown(x.AxisName)))
             {
                 this.m_CurrentKeyPresses.Add(keyBind.Value);
                 this.OnKeyPressed.Invoke(keyBind.Value, keyBind.AxisName);
             }
 
-            if(this.OnAttack != null && this.m_CurrentKeyPresses.Count == 8)
+            if (this.OnAttack != null && this.m_CurrentKeyPresses.Count == 8)
+            {
                 this.OnAttack.Invoke(this.m_PlayerObject.processInput(this.m_CurrentKeyPresses, Modifiers.None));
+                this.m_CurrentKeyPresses.Clear();
+            }
         }
 
         
