@@ -17,11 +17,7 @@
         {
             this.NewRound();
         }
-
-        private void Update()
-        {
-            
-        }
+        
 
         public void NewRound()
         {
