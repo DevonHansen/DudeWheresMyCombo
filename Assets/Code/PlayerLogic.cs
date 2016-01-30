@@ -14,10 +14,12 @@ namespace DWMCGameLogic
         private List<int> currentDefenseCombo;
 
         // Unity Events 
-        public UnityEvent isDefendState;
-        public UnityEvent isAttackState;
-        public UnityEvent isDead;
-        public UnityEvent failedAttack;
+        public UnityEvent isDefendState;        // Invoked when player moves to defense state
+        public UnityEvent isAttackState;        // Invoked when player changes to attack state
+        public UnityEvent isDead;               // Invoked when player dies
+        public UnityEvent failedAttack;         // Invoked when player fails to activate any combination from an input sequence
+        public UnityEvent isStunned;            // Invoked when player fails to activate any combination from an input sequence
+
 
         public Player(byte health, GameLogic thisRound)
         {
@@ -28,8 +30,9 @@ namespace DWMCGameLogic
         /// <summary>
         /// Processes the input and returns an attack object. 
         /// </summary>
-        /// <param name="playerCombination"></param>
+        /// <param name="inputCombination"></param>
         /// <param name="modifier"></param>
+        /// <returns>Attack object</returns>
         public Attack processInput(List<int> inputCombination, Modifiers modifier)
         {
             // Determine the state of the player and get any valid combos from the input. 
@@ -38,16 +41,20 @@ namespace DWMCGameLogic
             // Create the attack object
             var attack = this.GetAttack(playerCombination, modifier);
 
-            //
+            // If is in attack state, return the attack
             if (state == State.Attack)
             {
+                if(attack.Value <= 0)
+                {
+                    failedAttack.Invoke();
+                }
                 return attack; 
             }
-            else
+            else //Return a valueless attack object and store the input as a defenseCombo
             {
                 this.currentDefenseCombo = playerCombination;
 
-                return attack;
+                return new Attack { Value = 0, Modifier = Modifiers.None, isStun = false };
             }      
         }
 
@@ -55,29 +62,51 @@ namespace DWMCGameLogic
         /// Processes an incoming attack. 
         /// </summary>
         /// <param name="attack"></param>
-        public Attack processIncomingAttack(Attack attack)
+        public Counter processIncomingAttack(Attack attack)
         {
             // Check whether in defense mode, and whether defense is greater than attack. If it is, return an attack object
             //  with isStun set to true. 
             if (state == State.Defense)
             {
                 var defense = this.GetAttack(currentDefenseCombo, Modifiers.None);
-                if(defense == attack)
+
+                if (defense.Value > attack.Value)
                 {
-                    return new Attack();
-                }
-                else if (defense.Value > attack.Value)
-                {
-                    return new Attack
+                    return new Counter
                     {
                         Value = 0,
                         Modifier = Modifiers.None,                       
                         isStun = true
                     };
                 }
+                else
+                {
+                    this.health -= (int)attack.Value;
+                }
             }
-            return new Attack();            
+            else
+            {
+                this.health -= (int)attack.Value;
+            }
+            return new Counter
+            {
+                Value = 0,
+                Modifier = Modifiers.None,
+                isStun = false
+            };            
         }
+
+        /// <summary>
+        /// Processes the incoming counter
+        /// </summary>
+        /// <param name="counter"></param>
+        public void processIncomingCounter(Counter counter)
+        {
+            if(counter.isStun)
+            {
+                isStunned.Invoke();
+            }
+        } 
 
         private Attack GetAttack(List<int> inputCombination, Modifiers modifier)
         {

@@ -25,7 +25,6 @@ namespace DWMCGameLogic
 
             // Pop that list and add to the defense dictionary. 
 
-
         }
 
     }
