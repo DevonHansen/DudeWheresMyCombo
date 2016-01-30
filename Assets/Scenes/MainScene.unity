@@ -273,8 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d7081bc6587be4fbabfb403d52c805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Player1: {fileID: 652627161}
-  m_Player2: {fileID: 576055219}
+  m_Player1: {fileID: 0}
+  m_Player2: {fileID: 0}
 --- !u!1001 &576055218
 Prefab:
   m_ObjectHideFlags: 0
@@ -282,7 +282,7 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_KeyMapping.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -322,43 +322,37 @@ Prefab:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_KeyMapping.Array.data[0].AxisName
       value: Player2-Up
       objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_KeyMapping.Array.data[1].AxisName
       value: Player2-Down
       objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_KeyMapping.Array.data[1].Value
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_KeyMapping.Array.data[2].AxisName
       value: Player2-Left
       objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_KeyMapping.Array.data[2].Value
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_KeyMapping.Array.data[3].AxisName
       value: Player2-Right
       objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_KeyMapping.Array.data[3].Value
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &576055219 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b,
-    type: 2}
-  m_PrefabInternal: {fileID: 576055218}
-  m_Script: {fileID: 11500000, guid: af838a9a2b52eb54e8469cb14821f241, type: 3}
 --- !u!1001 &652627160
 Prefab:
   m_ObjectHideFlags: 0
@@ -366,14 +360,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: m_KeyMapping.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: OnCompletedSuccessEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 429486, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -410,63 +396,9 @@ Prefab:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: m_KeyMapping.Array.data[0].AxisName
-      value: Player1-Up
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: m_KeyMapping.Array.data[1].AxisName
-      value: Player1-Down
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: m_KeyMapping.Array.data[1].Value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: m_KeyMapping.Array.data[2].AxisName
-      value: Player1-Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: m_KeyMapping.Array.data[2].Value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: m_KeyMapping.Array.data[3].AxisName
-      value: Player1-Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: m_KeyMapping.Array.data[3].Value
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: OnCompletedSuccessEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: OnCompletedSuccessEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: OnCompletedSuccessEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: OnCompletedSuccessEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DebugString
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
-      propertyPath: OnCompletedSuccessEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &652627161 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11492758, guid: 1aaab07a0c9aafa4ead55f92cf0f124b,
-    type: 2}
-  m_PrefabInternal: {fileID: 652627160}
-  m_Script: {fileID: 11500000, guid: af838a9a2b52eb54e8469cb14821f241, type: 3}
 --- !u!1 &908613389
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,8 +487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d7081bc6587be4fbabfb403d52c805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Player1: {fileID: 652627161}
-  m_Player2: {fileID: 576055219}
+  m_Player1: {fileID: 0}
+  m_Player2: {fileID: 0}
 --- !u!4 &1257430131
 Transform:
   m_ObjectHideFlags: 0
