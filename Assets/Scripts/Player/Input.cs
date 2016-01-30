@@ -27,7 +27,17 @@
 
         private Player m_PlayerObject;
 
+        public CurrentRound m_CurrentRound;
+
         public UnityEvent OnKeyPressed;
+
+        private void Start()
+        {
+            if (this.m_CurrentRound == null)
+            {
+                Debug.LogError("Current Round must be assigned");
+            }
+        }
 
         private void Update()
         {
