@@ -6,24 +6,20 @@ using UnityEngine.UI;
 public class InputRow : MonoBehaviour
 {
 	public Row row;
-	Selectable[] buttonSelectors;
-
 	public UnityEvent onIncorrectInput;
-
-	void Awake()
-	{
-		buttonSelectors = new Selectable[row.buttons.Count];
-		for (int i = 0; i < row.buttons.Count; ++i)
-		{
-			var selector = row.buttons[i].GetComponent<Selectable>();
-			if(selector == null)
-				Debug.LogWarning(row.buttons[i].name + " missing selector", row.buttons[i].gameObject);
-
-			buttonSelectors[i] = selector;
-		}
-	}
 
 	public void ResetButtons()
 	{
+		foreach (var btn in row.buttons)
+		{
+			btn.buttonSelector.interactable = false; // Will cause transition animation.
+		}
+	}
+
+	public void ActivateButton(string input, int button)
+	{
+		Sprite s = ImageMap.instance.GetSprite(input);
+		row.buttons[button].button.sprite = s;
+		row.buttons[button].buttonSelector.interactable = true;
 	}
 }

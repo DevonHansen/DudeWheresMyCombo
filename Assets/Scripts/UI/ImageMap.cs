@@ -4,6 +4,17 @@ using System.Linq;
 
 public class ImageMap : MonoBehaviour
 {
+	public static ImageMap instance
+	{
+		get
+		{
+			if (_instance == null)
+				_instance = FindObjectOfType<ImageMap>();
+			return _instance;
+		}
+	}
+	static ImageMap _instance;
+
 	[System.Serializable]
 	public class MappedImage
 	{
@@ -12,6 +23,17 @@ public class ImageMap : MonoBehaviour
 	}
 
 	public MappedImage[] images;
+
+	void Awake()
+	{
+		if (_instance != null)
+		{
+			Debug.LogWarning("Too many image maps found. This is a singleton");
+			Destroy(this);
+		}
+		else
+			_instance = this;
+	}
 
 	public Sprite GetSprite(string input)
 	{
