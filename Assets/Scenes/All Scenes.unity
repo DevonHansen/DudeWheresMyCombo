@@ -1462,23 +1462,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22406312, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22406312, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22404550, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22404550, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22404550, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
@@ -1627,6 +1627,10 @@ Prefab:
       propertyPath: m_KeyMapping.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 429486, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1690,6 +1694,14 @@ Prefab:
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[3].Value
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
@@ -2845,7 +2857,7 @@ GameObject:
   - 95: {fileID: 646078414}
   - 114: {fileID: 646078413}
   m_Layer: 5
-  m_Name: Button Presses - Bad
+  m_Name: Button Presses - good
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3654,7 +3666,7 @@ GameObject:
   - 95: {fileID: 1091031642}
   - 114: {fileID: 1091031643}
   m_Layer: 5
-  m_Name: Button Presses - Good
+  m_Name: Button Presses - bad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3797,11 +3809,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22406312, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22406312, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22404550, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
       propertyPath: m_AnchorMin.x
@@ -3813,7 +3825,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22404550, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11495902, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
       propertyPath: m_Color.r
