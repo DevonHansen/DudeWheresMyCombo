@@ -10,7 +10,7 @@ public class SceneLoader : MonoBehaviour
 	{
 		foreach (var scn in scenes)
 		{
-			SceneManager.LoadScene(scn);
+			SceneManager.LoadScene(scn, LoadSceneMode.Additive);
 		}
 	}
 
