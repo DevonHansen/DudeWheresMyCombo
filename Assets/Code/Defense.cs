@@ -1,15 +1,13 @@
-﻿using System.Collections.Generic;
-
-namespace DWMCGameLogicDtos
+﻿namespace DWMCGameLogicDtos
 {
     /// <summary>
-    /// Defense DTO that 
+    /// Defense DTO that is probably unnecessary
     /// </summary>
     public class Defense
     {
         public double Value { get; set; }
 
-        public double Modifiers { get; set; }
+        public Modifiers Modifier { get; set; }
     }
 
 }

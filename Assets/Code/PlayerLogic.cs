@@ -1,17 +1,25 @@
 ﻿using DWMCGameLogicDtos;
 using System;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 namespace DWMCGameLogic
-{
+{ 
     public class Player
     {
+        GameLogic thisRound;
         State state;
         byte health;
 
-        public Player(byte health)
+        // Unity Events 
+        public UnityEvent isDefendState;
+        public UnityEvent isAttackState;
+        public UnityEvent isDead;
+
+        public Player(byte health, GameLogic thisRound)
         {
             this.health = health;
+            this.thisRound = thisRound;
         }
 
         /// <summary>
@@ -19,68 +27,82 @@ namespace DWMCGameLogic
         /// </summary>
         /// <param name="playerCombination"></param>
         /// <param name="modifier"></param>
-        public Attack processInput(Dictionary<int, List<int>> playerCombination, Modifiers modifier)
+        public Attack processInput(List<int> inputCombination, Modifiers modifier)
         {
+            // Determine the state of the player. 
+            var playerCombination = this.setState(inputCombination);
+
+            var attack = this.GetAttack(playerCombination, modifier);
+
             if (state == State.Attack)
             {
-                //Do something
+                return attack; 
             }
             else
             {
-                //Return a broken attack. 
-            }
-            return this.GetAttack(playerCombination, modifier);
+                var defense = this.GetDefense(playerCombination, modifier);
+
+                if (attack.Value <= defense.Value)
+                {
+                    attack.isStun = true;
+                }
+
+                return attack;
+            }      
         }
-       
+
+        /// <summary>
+        /// Processes an incoming attack. 
+        /// </summary>
+        /// <param name="attack"></param>
         public void processAttack(Attack attack)
         {
             throw new NotImplementedException();
         }
 
-        private Attack GetAttack(Dictionary<int, List<int>> playerCombination, Modifiers modifier)
+        private Attack GetAttack(List<int> inputCombination, Modifiers modifier)
         {
             return new Attack
             {
-                Value = this.GetAttackValue(playerCombination),
-                Modifiers = this.GetModifiers(modifier)
+                Value = this.GetAttackValue(inputCombination),
+                Modifier = modifier
             };
         }
 
-        private Defense GetDefense(Dictionary<int, List<int>> playerCombination, Modifiers modifier)
+        private Defense GetDefense(List<int> inputCombination, Modifiers modifier)
         {
             return new Defense
             {
-                Value = this.GetDefenseValue(playerCombination),
-                Modifiers = this.GetModifiers(modifier)
+                Value = this.GetDefenseValue(inputCombination),
+                Modifier = modifier
             };
         }
 
-        private double GetAttackValue(Dictionary<int, List<int>> playerCombination)
+        private double GetAttackValue(List<int> inputCombination)
         {
                 double result = 0;
 
                 return result;
         }
 
-        private double GetDefenseValue(Dictionary<int, List<int>> playerCombination)
+        private double GetDefenseValue(List<int> inputCombination)
         {
             double result = 0;
 
             return result;
         }
 
-        private double GetModifiers(Modifiers modifier)
+        private List<int> setState(List<int> inputCombination)
         {
-            double result;
+            //Compare input combination to the gamelogic string.
 
-            if (modifier == Modifiers.Minor)
-                result = 1.2;
-            else if (modifier == Modifiers.Major)
-                result = 1.5;
-            else 
-                result = 1.0;
+            for (int i = 0; i < thisRound.determinedAttackCombos.Count; i++ )
+            {
 
-            return result;
+            }
+
+
+            return new List<int>();
         }
     }
 
