@@ -331,6 +331,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 937063727}
   - 114: {fileID: 937063726}
+  - 114: {fileID: 937063728}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -350,12 +351,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AvailableAxis:
-  - AxisName: Horizontal
-    Negative: 1
+  - AxisName: Left
     Value: 1
-  - AxisName: Horizontal
-    Negative: 0
+  - AxisName: Right
     Value: 2
+  OnSuccessKeyboard:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFailedKeyboard:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!4 &937063727
 Transform:
   m_ObjectHideFlags: 0
@@ -368,6 +377,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &937063728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937063725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc377d6a511b7b4db5f8c4a71aab77f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1693769848
 GameObject:
   m_ObjectHideFlags: 0
