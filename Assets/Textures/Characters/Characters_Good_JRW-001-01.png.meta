@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: 5b4e80b87429947bc96ea27a79fbdfb6
+timeCreated: 1454193837
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Characters_Good-Head
+    21300002: Characters_Good-RightArm
+    21300004: Characters_Good-LeftArm
+    21300006: Characters_Good-Body
+    21300008: Characters_Good-EyesFine
+    21300010: Characters_Good_JRW-001-01_5
+    21300012: Characters_Good-MouthFine
+    21300014: Characters_Good-MouthFlinch
+    21300016: Characters_Good-RightFoot
+    21300018: Characters_Good-LeftFoot
+    21300020: Characters_Good-RightWing
+    21300022: Characters_Good-LeftWing
+    21300024: Characters_Good-Halo
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Characters_Good-Head
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 710
+        width: 435
+        height: 294
+      alignment: 9
+      pivot: {x: 0.49289238, y: 0.089864925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 146.59181, y: 30.579712}
+        - {x: 158.59181, y: 50.579712}
+        - {x: 184.59181, y: 104.57971}
+        - {x: 203.59181, y: 104.57971}
+        - {x: 218.59181, y: 116.57971}
+        - {x: 220.59181, y: 121.57971}
+        - {x: 220.59181, y: 155.57971}
+        - {x: 180.59181, y: 195.57971}
+        - {x: 148.59181, y: 223.57971}
+        - {x: 120.59181, y: 240.57971}
+        - {x: 99.59181, y: 250.57971}
+        - {x: 60.591812, y: 264.5797}
+        - {x: 37.591812, y: 267.5797}
+        - {x: -33.408188, y: 267.5797}
+        - {x: -64.40819, y: 260.5797}
+        - {x: -117.40819, y: 236.57971}
+        - {x: -137.40819, y: 219.57971}
+        - {x: -168.40819, y: 201.57971}
+        - {x: -191.40819, y: 171.57971}
+        - {x: -194.40819, y: 149.57971}
+        - {x: -211.40819, y: 137.57971}
+        - {x: -214.40819, y: 127.57971}
+        - {x: -214.40819, y: 101.57971}
+        - {x: -207.40819, y: 91.57971}
+        - {x: -188.40819, y: 74.57971}
+        - {x: -174.40819, y: 42.579712}
+        - {x: -151.40819, y: 18.579712}
+        - {x: -115.40819, y: -4.420288}
+        - {x: -85.40819, y: -16.420288}
+        - {x: -61.408188, y: -23.420288}
+        - {x: -44.408188, y: -26.420288}
+        - {x: 49.591812, y: -26.420288}
+        - {x: 70.59181, y: -20.420288}
+        - {x: 83.59181, y: -14.420288}
+        - {x: 111.59181, y: -2.420288}
+    - name: Characters_Good-RightArm
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 577
+        width: 202
+        height: 371
+      alignment: 9
+      pivot: {x: 0.82907647, y: 0.94168395}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34.52655, y: -7.364746}
+        - {x: 34.52655, y: 21.635254}
+        - {x: -17.47345, y: 21.635254}
+        - {x: -49.47345, y: 12.635254}
+        - {x: -75.47345, y: -8.364746}
+        - {x: -139.47345, y: -97.364746}
+        - {x: -162.47345, y: -183.36475}
+        - {x: -167.47345, y: -221.36475}
+        - {x: -167.47345, y: -346.36475}
+        - {x: -162.47345, y: -349.36475}
+        - {x: -74.47345, y: -349.36475}
+        - {x: -53.47345, y: -335.36475}
+        - {x: -61.47345, y: -210.36475}
+        - {x: -21.47345, y: -76.364746}
+    - name: Characters_Good-LeftArm
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 572
+        width: 137
+        height: 376
+      alignment: 9
+      pivot: {x: 0.19533478, y: 0.9358105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93.239136, y: -92.864746}
+        - {x: 71.239136, y: -33.864746}
+        - {x: 32.239136, y: 13.135254}
+        - {x: 17.239136, y: 24.135254}
+        - {x: -26.760864, y: 24.135254}
+        - {x: -26.760864, y: -23.864746}
+        - {x: 5.2391357, y: -164.86475}
+        - {x: 12.239136, y: -286.86475}
+        - {x: -1.7608643, y: -333.86475}
+        - {x: 14.239136, y: -349.86475}
+        - {x: 33.239136, y: -351.86475}
+        - {x: 103.239136, y: -351.86475}
+        - {x: 110.239136, y: -329.86475}
+        - {x: 110.239136, y: -180.86475}
+        - {x: 109.239136, y: -170.86475}
+    - name: Characters_Good-Body
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 237
+        width: 325
+        height: 412
+      alignment: 9
+      pivot: {x: 0.4952434, y: 0.079757094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 128.0459, y: -14.859924}
+        - {x: 138.0459, y: 8.140076}
+        - {x: 143.0459, y: 21.140076}
+        - {x: 152.0459, y: 57.140076}
+        - {x: 160.0459, y: 104.140076}
+        - {x: 164.0459, y: 126.140076}
+        - {x: 164.0459, y: 220.14008}
+        - {x: 157.0459, y: 258.14008}
+        - {x: 153.0459, y: 273.14008}
+        - {x: 135.0459, y: 315.14008}
+        - {x: 125.0459, y: 329.14008}
+        - {x: 129.0459, y: 353.14008}
+        - {x: 122.0459, y: 364.14008}
+        - {x: 115.0459, y: 365.14008}
+        - {x: 94.0459, y: 363.14008}
+        - {x: 69.0459, y: 374.14008}
+        - {x: 43.0459, y: 379.14008}
+        - {x: 8.045898, y: 379.14008}
+        - {x: -10.954102, y: 376.14008}
+        - {x: -40.9541, y: 366.14008}
+        - {x: -69.9541, y: 350.14008}
+        - {x: -83.9541, y: 372.14008}
+        - {x: -90.9541, y: 373.14008}
+        - {x: -92.9541, y: 369.14008}
+        - {x: -93.9541, y: 349.14008}
+        - {x: -86.9541, y: 338.14008}
+        - {x: -97.9541, y: 330.14008}
+        - {x: -128.9541, y: 296.14008}
+        - {x: -146.9541, y: 265.14008}
+        - {x: -153.9541, y: 247.14008}
+        - {x: -159.9541, y: 220.14008}
+        - {x: -160.9541, y: 214.14008}
+        - {x: -160.9541, y: 69.140076}
+        - {x: -158.9541, y: 48.140076}
+        - {x: -154.9541, y: 20.140076}
+        - {x: -146.9541, y: -2.8599243}
+        - {x: -140.9541, y: -11.859924}
+        - {x: -130.9541, y: -22.859924}
+        - {x: -113.9541, y: -29.859924}
+        - {x: -80.9541, y: -30.859924}
+        - {x: -59.9541, y: -32.859924}
+        - {x: 115.0459, y: -32.859924}
+    - name: Characters_Good-EyesFine
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 347
+        width: 209
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 67.5}
+        - {x: -58.5, y: 58.5}
+        - {x: -95.5, y: 37.5}
+        - {x: -104.5, y: 7.5}
+        - {x: -104.5, y: -51.5}
+        - {x: -89.5, y: -67.5}
+        - {x: 96.5, y: -67.5}
+        - {x: 104.5, y: -45.5}
+        - {x: 104.5, y: 40.5}
+        - {x: 75.5, y: 67.5}
+    - name: Characters_Good_JRW-001-01_5
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 344
+        width: 234
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 117, y: 9.5}
+        - {x: 80, y: 69.5}
+        - {x: -57, y: 69.5}
+        - {x: -117, y: 17.5}
+        - {x: -117, y: -43.5}
+        - {x: -96, y: -69.5}
+        - {x: 81, y: -69.5}
+        - {x: 108, y: -46.5}
+        - {x: 112, y: -27.5}
+        - {x: 117, y: -3.5}
+    - name: Characters_Good-MouthFine
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 249
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 19.5}
+        - {x: -33, y: -13.5}
+        - {x: -15, y: -19.5}
+        - {x: 25, y: -19.5}
+        - {x: 33, y: -11.5}
+        - {x: 33, y: 19.5}
+    - name: Characters_Good-MouthFlinch
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 226
+        width: 89
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 21.5}
+        - {x: -44.5, y: 19.5}
+        - {x: -44.5, y: -14.5}
+        - {x: -41.5, y: -21.5}
+        - {x: 44.5, y: -21.5}
+        - {x: 44.5, y: 21.5}
+    - name: Characters_Good-RightFoot
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 31
+        width: 147
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57.5, y: 56}
+        - {x: -73.5, y: 16}
+        - {x: -73.5, y: -41}
+        - {x: -66.5, y: -56}
+        - {x: 71.5, y: -56}
+        - {x: 73.5, y: -49}
+        - {x: 73.5, y: 36}
+        - {x: 65.5, y: 56}
+    - name: Characters_Good-LeftFoot
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 27
+        width: 165
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.5, y: 56}
+        - {x: -64.5, y: 50}
+        - {x: -82.5, y: 37}
+        - {x: -82.5, y: -56}
+        - {x: 82.5, y: -56}
+        - {x: 82.5, y: 20}
+        - {x: 37.5, y: 56}
+    - name: Characters_Good-RightWing
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 42
+        width: 113
+        height: 133
+      alignment: 9
+      pivot: {x: 0.8009703, y: 0.1745485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -78.50964, y: 109.78505}
+        - {x: -90.50964, y: 93.78505}
+        - {x: -90.50964, y: 18.78505}
+        - {x: -35.509644, y: -23.21495}
+        - {x: 18.490356, y: -23.21495}
+        - {x: 22.490356, y: -13.214951}
+        - {x: 22.490356, y: 33.78505}
+        - {x: -61.509644, y: 109.78505}
+    - name: Characters_Good-LeftWing
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 46
+        width: 112
+        height: 133
+      alignment: 9
+      pivot: {x: 0.22394726, y: 0.16292554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60.917908, y: 111.3309}
+        - {x: -25.082092, y: 25.330902}
+        - {x: -25.082092, y: -13.669098}
+        - {x: -24.082092, y: -15.669098}
+        - {x: -12.082092, y: -21.669098}
+        - {x: 15.917908, y: -21.669098}
+        - {x: 29.917908, y: -18.669098}
+        - {x: 86.91791, y: 11.330902}
+        - {x: 86.91791, y: 111.3309}
+    - name: Characters_Good-Halo
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 58
+        width: 158
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61, y: 49}
+        - {x: -79, y: 45}
+        - {x: -79, y: -29}
+        - {x: -43, y: -49}
+        - {x: 50, y: -49}
+        - {x: 72, y: -45}
+        - {x: 79, y: -25}
+        - {x: 79, y: 31}
+        - {x: 59, y: 49}
+      - - {x: -37, y: -20}
+        - {x: -8, y: 27}
+        - {x: 32, y: 23}
+        - {x: 14, y: -28}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
