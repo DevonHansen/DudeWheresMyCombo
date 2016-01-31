@@ -44,6 +44,8 @@ public class InputRow : MonoBehaviour
 		Sprite s = ImageMap.instance.GetSprite(input);
 		row.buttons[index].button.sprite = s;
 		index++;
+		if (index > 7)
+			index = 7;
 	}
 
 	public void DoAttack(Attack atk)

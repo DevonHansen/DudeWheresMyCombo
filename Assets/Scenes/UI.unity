@@ -1936,7 +1936,6 @@ GameObject:
   - 225: {fileID: 540604540}
   - 114: {fileID: 540604542}
   - 114: {fileID: 540604541}
-  - 222: {fileID: 540604543}
   m_Layer: 5
   m_Name: Row Bottom
   m_TagString: Untagged
@@ -2045,13 +2044,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!222 &540604543
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22227224, guid: 47df78c95ae909741907a4181f6c2f5f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 540604537}
 --- !u!1001 &553509338
 Prefab:
   m_ObjectHideFlags: 0
@@ -4618,21 +4610,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   images:
   - inputName: Player1-Left
-    sprite: {fileID: 21300000, guid: 77152beceb48ec547a0678c65eebfa72, type: 3}
+    sprite: {fileID: 21300000, guid: be2895af2f60542c1b28086aeb472e40, type: 3}
   - inputName: Player1-Right
-    sprite: {fileID: 21300000, guid: 72151f66f72430d40a55f7dd5f83eabd, type: 3}
+    sprite: {fileID: 21300000, guid: c5c5d323254c94d43b40aa0c37f4148f, type: 3}
   - inputName: Player1-Up
-    sprite: {fileID: 21300000, guid: 383ba279bc1ae2848b6d2dafe5ec6fbb, type: 3}
+    sprite: {fileID: 21300000, guid: 6db08076e89de446eb98733fee74a129, type: 3}
   - inputName: Player1-Down
-    sprite: {fileID: 21300000, guid: 740497587ec1b6343b7b0d7187b5f981, type: 3}
+    sprite: {fileID: 21300000, guid: a75aee5deb5194468b964346d7a0155f, type: 3}
   - inputName: Player2-Left
-    sprite: {fileID: 21300000, guid: 77152beceb48ec547a0678c65eebfa72, type: 3}
+    sprite: {fileID: 21300000, guid: 895eec6d8b4054bcb95f7f0e53d9be89, type: 3}
   - inputName: Player2-Right
-    sprite: {fileID: 21300000, guid: 72151f66f72430d40a55f7dd5f83eabd, type: 3}
+    sprite: {fileID: 21300000, guid: 6dca371d77a829d47b28801fe42ac5c7, type: 3}
   - inputName: Player2-Up
-    sprite: {fileID: 21300000, guid: 383ba279bc1ae2848b6d2dafe5ec6fbb, type: 3}
+    sprite: {fileID: 21300000, guid: 3d79e4089d9eb4f49a5bfe7044393b70, type: 3}
   - inputName: Player2-Down
-    sprite: {fileID: 21300000, guid: 740497587ec1b6343b7b0d7187b5f981, type: 3}
+    sprite: {fileID: 21300000, guid: 1dabbd1b3ec8c49e58c1d4257df510c6, type: 3}
 --- !u!1001 &1494632348
 Prefab:
   m_ObjectHideFlags: 0

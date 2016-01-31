@@ -15,5 +15,7 @@ public class ButtonSounds : MonoBehaviour
 	public void DoButton()
 	{ 
 		AudioSource.PlayClipAtPoint(clips[current++], new Vector3(3, 5, -10), 10);
+		if (current > 7)
+			current = 7;
 	}
 }
