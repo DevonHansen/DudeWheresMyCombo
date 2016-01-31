@@ -41,7 +41,6 @@ public class InputRow : MonoBehaviour
 	int index = 0;
 	public void ActivateButton(int button, string input)
 	{
-		print("ActivateButton " + index + "-" + input);
 		Sprite s = ImageMap.instance.GetSprite(input);
 		row.buttons[index].button.sprite = s;
 		index++;
@@ -49,7 +48,6 @@ public class InputRow : MonoBehaviour
 
 	public void DoAttack(Attack atk)
 	{
-		print("Attack " + atk.Value);
 		for (int i = 0; i < atk.Value; ++i)
 		{
 			row.buttons[i].border.color = goodColor;

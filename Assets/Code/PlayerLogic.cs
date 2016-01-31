@@ -276,30 +276,32 @@ namespace DWMCGameLogic
         private List<int> SetStateAndGetCombo(List<int> inputCombination)
         {
             //Compare input combination to the round attack combos.
-            var attackValue = this.GetAttackValue(inputCombination);
+            //var attackValue = this.GetAttackValue(inputCombination);
 
-            //Compare input combination to the round defense combos.
-            var defenseValue = this.GetDefenseValue(inputCombination);
+            ////Compare input combination to the round defense combos.
+            //var defenseValue = this.GetDefenseValue(inputCombination);
 
-            // Determine which of the resulting lists is larger, and set the state depending on that. 
-            if(attackValue.Count <= 0 || attackValue.Count < defenseValue.Count)
-            {
-                if (isDefendState != null)
-                {
-                    isDefendState.Invoke();
-                }
-                this.state = State.Defense;
-                return defenseValue;
-            }
-            else
-            {
+            //// Determine which of the resulting lists is larger, and set the state depending on that. 
+            //if(attackValue.Count <= 0 || attackValue.Count < defenseValue.Count)
+            //{
+            //    if (isDefendState != null)
+            //    {
+            //        isDefendState.Invoke();
+            //    }
+            //    this.state = State.Defense;
+            //    return defenseValue;
+            //}
+            //else
+            //{
                 if (isAttackState != null)
                 {
                     isAttackState.Invoke();
                 }
                 this.state = State.Attack;
-                return attackValue;
-            }
+            return this.GetAttackValue(inputCombination);
+
+            // return attackValue;
+            // }
         }
         private void CheckIfDead()
         {

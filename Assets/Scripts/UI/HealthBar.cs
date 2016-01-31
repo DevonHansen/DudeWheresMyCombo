@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using DWMCGameLogicDtos;
-using JetBrains.Annotations;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Input = Assets.Scripts.Player.Input;
 
 public class HealthBar : MonoBehaviour
 {
@@ -20,9 +20,10 @@ public class HealthBar : MonoBehaviour
 			Debug.LogWarning("Could not find " + side);
 
 		var input = inputGO.GetComponent<Input>();
+		input.OnAttack.AddListener(GoAttack);
 	}
 
-	public void OnAttack(Attack atk)
+	public void GoAttack(Attack atk)
 	{
 		if(atk.Value > 0)
 			StartCoroutine(DoAttack(atk));
@@ -32,12 +33,13 @@ public class HealthBar : MonoBehaviour
 	{
 		yield return new WaitForSeconds(delayBeforeDamage);
 
-		float dmg = 10f / (float)atk.Value;
+		float dmg = (float)atk.Value/10;
 		float healthAfterHit = slider.value - dmg;
+		print("Dmg from " + slider.value + " to " + healthAfterHit);
 
 		while (slider.value > healthAfterHit)
 		{
-			Mathf.MoveTowards(slider.value, healthAfterHit, Time.deltaTime * dmg);
+			slider.value = Mathf.MoveTowards(slider.value, healthAfterHit, Time.deltaTime * dmg);
 			yield return 0;
 		}
 
