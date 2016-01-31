@@ -870,6 +870,14 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -22.99
       objectReference: {fileID: 0}
+    - target: {fileID: 451806, guid: 7584dbce05a9247de98b90d07c186e55, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 451806, guid: 7584dbce05a9247de98b90d07c186e55, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11.19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7584dbce05a9247de98b90d07c186e55, type: 2}
   m_IsPrefabParent: 0
@@ -1747,11 +1755,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426572, guid: d693eaf7a530f47cf9208d9a7e6cff5a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.49
+      value: 6.56
       objectReference: {fileID: 0}
     - target: {fileID: 426572, guid: d693eaf7a530f47cf9208d9a7e6cff5a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.53
+      value: 16.09
       objectReference: {fileID: 0}
     - target: {fileID: 10882374, guid: d693eaf7a530f47cf9208d9a7e6cff5a, type: 2}
       propertyPath: m_BounceIntensity
@@ -1768,6 +1776,22 @@ Prefab:
     - target: {fileID: 10872058, guid: d693eaf7a530f47cf9208d9a7e6cff5a, type: 2}
       propertyPath: m_Range
       value: 5.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 495542, guid: d693eaf7a530f47cf9208d9a7e6cff5a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 495542, guid: d693eaf7a530f47cf9208d9a7e6cff5a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 487408, guid: d693eaf7a530f47cf9208d9a7e6cff5a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 487408, guid: d693eaf7a530f47cf9208d9a7e6cff5a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 9.96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d693eaf7a530f47cf9208d9a7e6cff5a, type: 2}
@@ -1814,7 +1838,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1202874194
 GameObject:
   m_ObjectHideFlags: 0
