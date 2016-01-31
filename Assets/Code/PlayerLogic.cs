@@ -1,6 +1,7 @@
 ﻿using DWMCGameLogicDtos;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.Events;
 
 namespace DWMCGameLogic
@@ -25,7 +26,7 @@ namespace DWMCGameLogic
         {
             this.health = health;
             this.thisRound = thisRound;
-        }
+    }
 
         /// <summary>
         /// Processes the input and returns an attack object. 
@@ -44,7 +45,7 @@ namespace DWMCGameLogic
             // If is in attack state, return the attack
             if (state == State.Attack)
             {
-                if(attack.Value <= 0)
+                if(attack.Value <= 0 && failedAttack != null)
                 {
                     failedAttack.Invoke();
                 }
@@ -96,7 +97,7 @@ namespace DWMCGameLogic
                 Value = 0,
                 Modifier = Modifiers.None,
                 isStun = false,
-                Damage =0
+                Damage = 0
             };            
         }
 
@@ -108,20 +109,24 @@ namespace DWMCGameLogic
         {
             if(counter.isStun)
             {
-                isStunned.Invoke();
+                if (isStunned != null)
+                {
+                    isStunned.Invoke();
+                }
             }
         } 
 
-        private Attack GetAttack(List<int> inputCombination, Modifiers modifier)
+        private Attack GetAttack(List<int> playerCombination, Modifiers modifier)
         {
             // Get an attack value from the input length. 
-            double attackValue = Math.Pow((double)inputCombination.Count, (double)inputCombination.Count) * ((int)modifier/100);
+            double attackValue = Math.Pow((double)playerCombination.Count, (double)playerCombination.Count) * ((int)modifier/100);
 
             return new Attack
             {
                 Damage = attackValue,
                 Modifier = modifier,
-                Value = inputCombination.Count
+                Value = playerCombination.Count,
+                biggestCombination = playerCombination
             };
         }
 
@@ -136,9 +141,64 @@ namespace DWMCGameLogic
 
             for (int i = 0; i < thisRound.determinedAttackCombos.Count; i++)
             {
-                if (thisRound.determinedAttackCombos[i].Equals(inputCombination))
+                var subCombo = thisRound.determinedAttackCombos[i];
+
+                if(subCombo.Count == 2 )
                 {
-                    result = thisRound.determinedAttackCombos[i];
+                    for (int k = 0; k < 7; k++)
+                    {
+                        var testSequence = inputCombination.GetRange(k, 2);
+
+                        if (subCombo.SequenceEqual(testSequence))
+                        {
+                            result = subCombo;
+                        }
+                    }
+                }
+                else if (subCombo.Count == 3)
+                {
+                    for (int k = 0; k < 6; k++)
+                    {
+                        var sequence = inputCombination.GetRange(k, subCombo.Count);
+
+                        if (subCombo.SequenceEqual(sequence))
+                        {
+                            result = subCombo;
+                        }
+                    }
+                }
+                else if (subCombo.Count > 3 && subCombo.Count < 7)
+                {
+                    {
+                        for (int k = 0; k < 3; k++)
+                        {
+                            var sequence = inputCombination.GetRange(k, subCombo.Count);
+
+                            if (subCombo.SequenceEqual(sequence))
+                            {
+                                result = subCombo;
+                            }
+                        }
+                    }
+                }
+                else if (subCombo.Count == 7)
+                {
+                    for (int k = 0; k < 2; k++)
+                    {
+                        var sequence = inputCombination.GetRange(k, subCombo.Count);
+
+                        if (subCombo.SequenceEqual(sequence))
+                        {
+                            result = subCombo;
+                        }
+                    }
+                }
+                else if (subCombo.Count == 8)
+                {
+                    if (subCombo.SequenceEqual(inputCombination))
+                    {
+                        result = subCombo;
+                    }
                 }
             }
             return result;
@@ -150,9 +210,64 @@ namespace DWMCGameLogic
 
             for (int i = 0; i < thisRound.determinedDefenseCombos.Count; i++)
             {
-                if (thisRound.determinedDefenseCombos[i].Equals(inputCombination))
+                var subCombo = thisRound.determinedDefenseCombos[i];
+
+                if (subCombo.Count == 2)
                 {
-                    result = thisRound.determinedAttackCombos[i];
+                    for (int k = 0; k < 7; k++)
+                    {
+                        var sequence = inputCombination.GetRange(k, subCombo.Count);
+
+                        if (subCombo.SequenceEqual(sequence))
+                        {
+                            result = subCombo;
+                        }
+                    }
+                }
+                else if (subCombo.Count == 3)
+                {
+                    for (int k = 0; k < 6; k++)
+                    {
+                        var sequence = inputCombination.GetRange(k, subCombo.Count);
+
+                        if (subCombo.SequenceEqual(sequence))
+                        {
+                            result = subCombo;
+                        }
+                    }
+                }
+                else if (subCombo.Count > 3 && subCombo.Count < 7)
+                {
+                    
+                    for (int k = 0; k < 3; k++)
+                    {
+                        var sequence = inputCombination.GetRange(k, subCombo.Count);
+
+                        if (subCombo.SequenceEqual(sequence))
+                        {
+                            result = subCombo;
+                        }
+                    }
+                    
+                }
+                else if (subCombo.Count == 7)
+                {
+                    for (int k = 0; k < 2; k++)
+                    {
+                        var sequence = inputCombination.GetRange(k, subCombo.Count);
+
+                        if (subCombo.SequenceEqual(sequence))
+                        {
+                            result = subCombo;
+                        }
+                    }
+                }
+                else if (subCombo.Count == 8)
+                {
+                    if (subCombo.SequenceEqual(inputCombination))
+                    {
+                        result = subCombo;
+                    }
                 }
             }
             return result;
@@ -169,20 +284,26 @@ namespace DWMCGameLogic
             // Determine which of the resulting lists is larger, and set the state depending on that. 
             if(attackValue.Count <= 0 || attackValue.Count < defenseValue.Count)
             {
-                isDefendState.Invoke();
+                if (isDefendState != null)
+                {
+                    isDefendState.Invoke();
+                }
                 this.state = State.Defense;
                 return defenseValue;
             }
             else
             {
-                isAttackState.Invoke();
+                if (isAttackState != null)
+                {
+                    isAttackState.Invoke();
+                }
                 this.state = State.Attack;
                 return attackValue;
             }
         }
         private void CheckIfDead()
         {
-            if(this.health <= 0)
+            if(this.health <= 0 && isDead != null)
             {
                 isDead.Invoke();
             }

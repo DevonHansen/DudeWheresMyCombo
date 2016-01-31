@@ -1,4 +1,7 @@
-﻿/// <summary>
+﻿
+
+using System.Collections.Generic;
+/// <summary>
 /// Attack dto for transferring attack value and any modifiers. Left as a DTO 
 /// </summary>
 namespace DWMCGameLogicDtos
@@ -12,5 +15,7 @@ namespace DWMCGameLogicDtos
         public bool isStun { get; set; }
 
         public double Damage { get; set; }
+
+        public List<int> biggestCombination { get; set; }
     }
 }
