@@ -16,8 +16,8 @@ namespace Assets.Scripts.Player
         public string ExitBigAttack;
 
         public Animator m_Animator;
-	    public Animator other;
-        public float hurtDelay = 1.5f;
+        public Animator other;
+        public float hurtDelay =2.5f;
 
         void Start()
         {

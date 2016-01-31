@@ -8,7 +8,7 @@ public class AttackAnimationController : MonoBehaviour
 	public string path;
 	public UnityEvent onFire;
 	public UnityEvent onHit;
-	public float time = 1.5f;
+	public float time = 0.7f;
 	public GameObject projectile;
 	GameObject instantiatedProj;
 
@@ -19,7 +19,7 @@ public class AttackAnimationController : MonoBehaviour
 
 		instantiatedProj = Instantiate(projectile) as GameObject;
 
-		iTween.MoveTo(instantiatedProj, iTween.Hash("path", iTweenPath.GetPath(path), "time", time, "easetype", iTween.EaseType.easeInExpo));
+		iTween.MoveTo(instantiatedProj, iTween.Hash("path", iTweenPath.GetPath(path), "time", time, "easetype", iTween.EaseType.easeOutSine));
 		Invoke("OnHit", time);
 	}
 
