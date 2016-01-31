@@ -1,7 +1,11 @@
-﻿namespace Assets.Scripts.Player
+﻿using DWMCGameLogicDtos;
+using UnityEngine;
+
+namespace Assets.Scripts.Player
 {
-    using UnityEngine;
-    public class AnimationManager : MonoBehaviour
+    using Input = Assets.Scripts.Player.Input;
+
+    public class AnimationManager : UnityEngine.MonoBehaviour
     {
         public string EnterBigAttack;
 
@@ -13,6 +17,12 @@
 
         public Animator m_Animator;
 
+        void Start()
+        {
+            var inp = GetComponent<Assets.Scripts.Player.Input>();
+            inp.OnAttack.AddListener(SmallAttack);
+        }
+
         public void StartBigAttack()
         {
             this.m_Animator.SetTrigger(this.EnterBigAttack);
@@ -23,9 +33,10 @@
             this.m_Animator.SetTrigger(this.ExitBigAttack);
         }
 
-        public void SmallAttack()
+        public void SmallAttack(Attack atk)
         {
-            this.m_Animator.SetTrigger(this.AttackSmall);
+            if(atk.Value >0)
+                this.m_Animator.SetTrigger(this.AttackSmall);
         }
 
         public void Hurt()

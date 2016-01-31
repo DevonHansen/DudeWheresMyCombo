@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DWMCGameLogicDtos;
 using UnityEngine.Events;
 
 public class AttackAnimationController : MonoBehaviour

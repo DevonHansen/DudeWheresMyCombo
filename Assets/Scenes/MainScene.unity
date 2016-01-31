@@ -115,6 +115,7 @@ MonoBehaviour:
   scenes:
   - Game
   - UI
+  - Sound
 --- !u!4 &443839193
 Transform:
   m_ObjectHideFlags: 0
