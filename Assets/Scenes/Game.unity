@@ -194,6 +194,12 @@ Transform:
   - {fileID: 1725855829}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &441637926 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b,
+    type: 2}
+  m_PrefabInternal: {fileID: 918267960}
+  m_Script: {fileID: 11500000, guid: c969d36a2674cfe489b48db194a31aa6, type: 3}
 --- !u!1001 &446222716
 Prefab:
   m_ObjectHideFlags: 0
@@ -289,6 +295,26 @@ Prefab:
       propertyPath: m_WaitTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: EnterBigAttack
+      value: ShouldEnterAttackBig
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: AttackSmall
+      value: ShouldAttackSmallRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: BeingHurt
+      value: BeingHurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: ExitBigAttack
+      value: ShouldExitAttackBig
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: m_Animator
+      value: 
+      objectReference: {fileID: 1590323489}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
   m_IsPrefabParent: 0
@@ -475,6 +501,10 @@ Prefab:
       propertyPath: m_KeyMapping.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 429486, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -546,6 +576,66 @@ Prefab:
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_WaitTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: EnterBigAttack
+      value: ShouldEnterAttackBig
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: AttackSmall
+      value: ShouldAttackSmallRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: BeingHurt
+      value: BeingHurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: ExitBigAttack
+      value: ShouldExitAttackBig
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425324, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: m_Animator
+      value: 
+      objectReference: {fileID: 1720221737}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 441637926}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SmallAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2106665637}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
@@ -779,6 +869,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4b4d99f3fd634c2aac53b7b485e39e9, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &1590323489 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9599306, guid: e4b4d99f3fd634c2aac53b7b485e39e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1590323488}
 --- !u!1 &1608504354
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +1004,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef80b39e851284ab2b869f92bdee4590, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &1720221737 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9596258, guid: ef80b39e851284ab2b869f92bdee4590,
+    type: 2}
+  m_PrefabInternal: {fileID: 1720221736}
 --- !u!4 &1725855829 stripped
 Transform:
   m_PrefabParentObject: {fileID: 437620, guid: 7584dbce05a9247de98b90d07c186e55, type: 2}
