@@ -124,6 +124,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 156678, guid: 800c87dd6ea504c4b9524f8028d5aa8b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 800c87dd6ea504c4b9524f8028d5aa8b, type: 2}
   m_IsPrefabParent: 0
@@ -201,6 +205,10 @@ Prefab:
       propertyPath: m_KeyMapping.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 429486, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -269,6 +277,18 @@ Prefab:
       propertyPath: m_CurrentRound
       value: 
       objectReference: {fileID: 1144356442}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: m_WaitTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
   m_IsPrefabParent: 0
@@ -522,6 +542,10 @@ Prefab:
     - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
       propertyPath: m_KeyMapping.Array.data[3].Value
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436428, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}
+      propertyPath: m_WaitTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aaab07a0c9aafa4ead55f92cf0f124b, type: 2}

@@ -14,10 +14,10 @@ public class RowController : MonoBehaviour
 		{
 			top.buttons[i].button.sprite = middle.buttons[i].button.sprite;
 			top.buttons[i].button.color = middle.buttons[i].button.color;
-			top.buttons[i].buttonSelector.interactable = middle.buttons[i].buttonSelector.interactable;
 			middle.buttons[i].button.sprite = bottom.buttons[i].button.sprite;
 			middle.buttons[i].button.color = bottom.buttons[i].button.color;
-			middle.buttons[i].buttonSelector.interactable = bottom.buttons[i].buttonSelector.interactable;
 		}
+
+		bottom.SendMessage("ResetButtons");
 	}
 }

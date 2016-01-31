@@ -11,9 +11,5 @@ public class Row : MonoBehaviour
 	void Awake()
 	{
 		buttons = GetComponentsInChildren<Button>().ToList();
-		foreach (var btn in buttons)
-		{
-			btn.buttonSelector.interactable = false;
-		}
 	}
 }

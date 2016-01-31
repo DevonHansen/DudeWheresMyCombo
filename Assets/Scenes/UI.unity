@@ -1408,6 +1408,10 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11492558, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc1fdc3f10d4c418b77381a607bc90, type: 2}
   m_IsPrefabParent: 0
@@ -1714,6 +1718,23 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   side: Bad Side/Player Input
+  onAttack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091031642}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: swiitch rows
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  blank: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &501445322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,6 +1972,23 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   side: Good Side/Player Input
+  onAttack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 646078414}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: swiitch rows
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  blank: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &540604542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3313,6 +3351,10 @@ Prefab:
       propertyPath: m_Name
       value: Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11458790, guid: 3c1e7c0f87b35d9448d876d763414285, type: 2}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c1e7c0f87b35d9448d876d763414285, type: 2}
   m_IsPrefabParent: 0
@@ -4510,13 +4552,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   images:
   - inputName: Player1-Left
-    sprite: {fileID: 21300000, guid: 132e36b17f924ba4a9d1181959e870e4, type: 3}
+    sprite: {fileID: 21300000, guid: 77152beceb48ec547a0678c65eebfa72, type: 3}
   - inputName: Player1-Right
-    sprite: {fileID: 21300000, guid: 132e36b17f924ba4a9d1181959e870e4, type: 3}
+    sprite: {fileID: 21300000, guid: 72151f66f72430d40a55f7dd5f83eabd, type: 3}
   - inputName: Player1-Up
-    sprite: {fileID: 21300000, guid: 132e36b17f924ba4a9d1181959e870e4, type: 3}
+    sprite: {fileID: 21300000, guid: 383ba279bc1ae2848b6d2dafe5ec6fbb, type: 3}
   - inputName: Player1-Down
-    sprite: {fileID: 21300000, guid: 132e36b17f924ba4a9d1181959e870e4, type: 3}
+    sprite: {fileID: 21300000, guid: 740497587ec1b6343b7b0d7187b5f981, type: 3}
   - inputName: Player2-Left
     sprite: {fileID: 21300000, guid: 132e36b17f924ba4a9d1181959e870e4, type: 3}
   - inputName: Player2-Right
