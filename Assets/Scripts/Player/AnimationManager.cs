@@ -16,6 +16,8 @@ namespace Assets.Scripts.Player
         public string ExitBigAttack;
 
         public Animator m_Animator;
+	    public Animator other;
+        public float hurtDelay = 1.5f;
 
         void Start()
         {
@@ -36,12 +38,15 @@ namespace Assets.Scripts.Player
         public void SmallAttack(Attack atk)
         {
             if(atk.Value >0)
+            {
                 this.m_Animator.SetTrigger(this.AttackSmall);
+                Invoke("Hurt", hurtDelay);
+            }
         }
 
         public void Hurt()
         {
-            this.m_Animator.SetTrigger(this.BeingHurt);
+            this.other.SetTrigger(this.BeingHurt);
         }
     }
 }

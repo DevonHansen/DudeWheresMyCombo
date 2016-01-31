@@ -12,6 +12,7 @@ public class HealthBar : MonoBehaviour
 	public float animationTime = 1;
 	public UnityEvent onDeath;
 	public string side = "Bad side/Player Input";
+	public AudioClip dmgSnd;
 
 	void Start()
 	{
@@ -36,6 +37,9 @@ public class HealthBar : MonoBehaviour
 		float dmg = (float)atk.Value/10;
 		float healthAfterHit = slider.value - dmg;
 		print("Dmg from " + slider.value + " to " + healthAfterHit);
+
+		if(dmgSnd)
+			AudioSource.PlayClipAtPoint(dmgSnd, new Vector3(3, 5, -10), 10);
 
 		while (slider.value > healthAfterHit)
 		{

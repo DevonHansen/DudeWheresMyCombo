@@ -1445,6 +1445,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   side: Bad Side/Player Input
+  dmgSnd: {fileID: 0}
 --- !u!1001 &414234474
 Prefab:
   m_ObjectHideFlags: 0
@@ -3644,6 +3645,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   side: Good Side/Player Input
+  dmgSnd: {fileID: 0}
 --- !u!1001 &1153587365
 Prefab:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using System.Collections;
 public class ButtonSounds : MonoBehaviour
 {
 	public AudioClip[] clips;
+
 	int current = 0;
 
 	public void Reset()
