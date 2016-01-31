@@ -13,5 +13,4 @@ public class SceneLoader : MonoBehaviour
 			SceneManager.LoadScene(scn, LoadSceneMode.Additive);
 		}
 	}
-
 }
