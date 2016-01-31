@@ -12,6 +12,8 @@ public class InputRow : MonoBehaviour
 	public string side = "Bad side/Player Input";
 	public UnityEvent onAttack;
 	public Sprite blank;
+	public Color goodColor = Color.blue;
+	public Color badColor = Color.black;
 
 	void Start()
 	{
@@ -29,6 +31,7 @@ public class InputRow : MonoBehaviour
 		foreach (var btn in row.buttons)
 		{
 			btn.button.sprite = blank;
+			btn.border.color = Color.white;
 			btn.buttonSelector.interactable = true;
 		}
 		index = 0;
@@ -46,6 +49,17 @@ public class InputRow : MonoBehaviour
 
 	public void DoAttack(Attack atk)
 	{
+		print("Attack " + atk.Value);
+		for (int i = 0; i < atk.Value; ++i)
+		{
+			row.buttons[i].border.color = goodColor;
+		}
+
+		for (int i = atk.Value; i < row.buttons.Count; ++i)
+		{
+			row.buttons[i].border.color = badColor;
+		}
+		
 		onAttack.Invoke();
 	}
 }
